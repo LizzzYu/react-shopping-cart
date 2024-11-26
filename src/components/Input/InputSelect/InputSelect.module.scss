@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 18px;
+  color: grey;
+
+  border: 1px solid var(--PRIMARY-BLACK);
+  border-radius: 4px;
+  outline: none;
+  appearance: none;
+  /* 隱藏原生箭頭 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  /* 背景色，防止箭頭被遮蓋 */
+
+  /* 自定義箭頭 */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black' width='16' height='16'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  /* 設定箭頭位置 */
+  background-size: 20px;
+  /* 調整箭頭大小 */
+
+  &:focus {
+    border: 2px solid black;
+  }
+
+  &.selected {
+    color: black;
+  }
+}

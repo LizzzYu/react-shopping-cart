@@ -1,0 +1,84 @@
+.wrapper {
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid var(--LIGHT_GREY);
+  border-radius: 4px;
+
+  &.selected {
+    border: 1px solid var(--BLACK);
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  p,
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.input {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--BLACK);
+  /* 外圈顏色 */
+  border-radius: 50%;
+  /* 圓形 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  /* 與內容區域的間距 */
+  position: absolute;
+  /* 相對 wrapper 定位 */
+  left: 16px;
+  /* 距離左側的距離 */
+
+  &::after {
+    content: '';
+    /* 內圈 */
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    /* 預設透明 */
+    border-radius: 50%;
+    /* 圓形 */
+    transition: background-color 0.2s ease;
+    /* 增加選中時的過渡動畫 */
+  }
+}
+
+.wrapper.selected .icon {
+  border-color: var(--BLACK);
+  background-color: var(--BLACK);
+  /* 選中時外圈顏色變化 */
+}
+
+.wrapper.selected .icon::after {
+  background-color: white;
+  /* 選中時內圈顏色 */
+}

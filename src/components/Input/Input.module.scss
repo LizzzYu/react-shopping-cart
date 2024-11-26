@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.input {
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 18px;
+
+  border: 1px solid var(--PRIMARY-BLACK);
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border: 2px solid black;
+  }
+}
